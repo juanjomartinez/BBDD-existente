@@ -1,0 +1,53 @@
+<%= form_for(@admin) do |f| %>
+  <% if @admin.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@admin.errors.count, "error") %> prohibited this admin from being saved:</h2>
+
+      <ul>
+      <% @admin.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :empleadoid %><br />
+    <%= f.text_field :empleadoid %>
+  </div>
+  <div class="field">
+    <%= f.label :descripcion %><br />
+    <%= f.text_field :descripcion %>
+  </div>
+  <div class="field">
+    <%= f.label :metodoautenticacion %><br />
+    <%= f.text_field :metodoautenticacion %>
+  </div>
+  <div class="field">
+    <%= f.label :nombreusuario %><br />
+    <%= f.text_field :nombreusuario %>
+  </div>
+  <div class="field">
+    <%= f.label :contrasena_pre %><br />
+    <%= f.password_field :contrasena_pre %>
+  </div>
+  <div class="field">
+    <%= f.label :servidorldapid %><br />
+    <%= f.text_field :servidorldapid %>
+  </div>
+  <div class="field">
+    <%= f.label :cncertificado %><br />
+    <%= f.text_field :cncertificado %>
+  </div>
+  <div class="field">
+    <%= f.label :activo %><br />
+    <%= f.text_field :activo %>
+  </div>
+  <div class="field">
+    <%= f.label :hash31 %><br />
+    <%= f.text_field :hash31 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

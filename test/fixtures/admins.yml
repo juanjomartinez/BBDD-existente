@@ -1,0 +1,25 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  adminitradorid: 1
+  empleadoid: 1
+  descripcion: MyString
+  metodoautenticacion: MyString
+  nombreusuario: MyString
+  contrasena: MyString
+  servidorldapid: 1
+  cncertificado: MyString
+  activo: MyString
+  hash31: MyString
+
+two:
+  adminitradorid: 1
+  empleadoid: 1
+  descripcion: MyString
+  metodoautenticacion: MyString
+  nombreusuario: MyString
+  contrasena: MyString
+  servidorldapid: 1
+  cncertificado: MyString
+  activo: MyString
+  hash31: MyString
