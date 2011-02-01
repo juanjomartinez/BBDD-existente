@@ -1,5 +1,9 @@
 EKronos::Application.routes.draw do
 
+  resources :departamentos, :key => :departamentoid
+
+  resources :empleados, :key => :empleadoid
+
   resources :admins, :key => :administradorid
 
   # The priority is based upon order of creation:

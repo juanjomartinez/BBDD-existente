@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :empleadoid %><br />
-    <%= f.text_field :empleadoid %>
+    <%= f.select :empleadoid, options_from_collection_for_select(Empleado.all, "empleadoid", "nombreempleado") %>
   </div>
   <div class="field">
     <%= f.label :descripcion %><br />

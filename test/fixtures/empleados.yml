@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  empleadoid: 1
+  nombreempleado: MyString
+  apellido1: MyString
+  apellido2: MyString
+  identificacion: MyString
+
+two:
+  empleadoid: 1
+  nombreempleado: MyString
+  apellido1: MyString
+  apellido2: MyString
+  identificacion: MyString

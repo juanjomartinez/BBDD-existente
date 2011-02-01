@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  departamentoid: 1
+  nombredepartamento: MyString
+  descripcion: MyString
+  metadepartamento: MyString
+
+two:
+  departamentoid: 1
+  nombredepartamento: MyString
+  descripcion: MyString
+  metadepartamento: MyString

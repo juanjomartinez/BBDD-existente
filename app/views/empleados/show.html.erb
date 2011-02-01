@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Empleadoid:</b>
+  <%= @empleado.empleadoid %>
+</p>
+
+<p>
+  <b>Nombreempleado:</b>
+  <%= @empleado.nombreempleado %>
+</p>
+
+<p>
+  <b>Apellido1:</b>
+  <%= @empleado.apellido1 %>
+</p>
+
+<p>
+  <b>Apellido2:</b>
+  <%= @empleado.apellido2 %>
+</p>
+
+<p>
+  <b>Identificacion:</b>
+  <%= @empleado.identificacion %>
+</p>
+
+
+<%= link_to 'Edit', edit_empleado_path(@empleado) %> |
+<%= link_to 'Back', empleados_path %>

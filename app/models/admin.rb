@@ -3,7 +3,9 @@ require 'digest/sha1'
 
 class Admin < ActiveRecord::Base
 	set_primary_key :administradorid
-	
+
+	belongs_to :empleado, :foreign_key => :empleadoid
+
 	attr_accessor :contrasena_pre
 
 	def self.table_name() 'administradores' end
