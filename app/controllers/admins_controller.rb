@@ -1,4 +1,7 @@
 class AdminsController < ApplicationController
+
+	before_filter :authorize
+
   # GET /admins
   # GET /admins.xml
   def index

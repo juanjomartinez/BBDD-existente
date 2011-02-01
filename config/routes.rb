@@ -1,5 +1,13 @@
 EKronos::Application.routes.draw do
 
+  get "session/index"
+
+  get "session/new"
+
+  post "session/create"
+
+  get "session/destroy"
+
   resources :departamentos, :key => :departamentoid
 
   resources :empleados, :key => :empleadoid
