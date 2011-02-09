@@ -1,4 +1,5 @@
 class DepartamentosController < ApplicationController
+
   # GET /departamentos
   # GET /departamentos.xml
   def index
@@ -6,6 +7,7 @@ class DepartamentosController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
+			format.js
       format.xml  { render :xml => @departamentos }
     end
   end

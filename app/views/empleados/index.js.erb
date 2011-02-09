@@ -1,0 +1,4 @@
+$(function(){
+	$("#empleados").html("Cargando...");
+	$("#empleados").html("<%= escape_javascript(render 'empleados') %>");
+});

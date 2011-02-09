@@ -1,7 +1,5 @@
 class AdminsController < ApplicationController
 
-	before_filter :authorize
-
   # GET /admins
   # GET /admins.xml
   def index
@@ -9,6 +7,7 @@ class AdminsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
+			format.js
       format.xml  { render :xml => @admins }
     end
   end
@@ -31,6 +30,7 @@ class AdminsController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
+			format.js
       format.xml  { render :xml => @admin }
     end
   end
@@ -44,6 +44,11 @@ class AdminsController < ApplicationController
   # POST /admins.xml
   def create
     @admin = Admin.new(params[:admin])
+		if params[:admin][:hash31] == "Y"
+			@admin.hashear_pass(params[:admin][:contrasena_pre])
+		else
+			@admin.contrasena = params[:admin][:contrasena_pre]
+		end
 
     respond_to do |format|
       if @admin.save

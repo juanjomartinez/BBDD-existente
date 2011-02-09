@@ -33,7 +33,7 @@ class Admin < ActiveRecord::Base
 	end
 
 	def hashed_pass(password)
-		Base64.encode64(hex_to_binary(Digest::SHA1.hexdigest(password)).join)
+		Base64.encode64(hex_to_binary(Digest::SHA1.hexdigest(password)).join).gsub("\n","")
 	end
 
 	def hashear_pass(password)

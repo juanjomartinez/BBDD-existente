@@ -1,13 +1,3 @@
-<br />
-<div style="float: right">
-<%= form_tag empleados_path, :method => 'get', :remote => true do %>
-	<%= text_field_tag :q, params[:q] %>
-	<%= submit_tag 'Buscar' %>
-<% end %>
-<br />
-</div>
-
-<div id="empleados">
 <table>
   <tr>
     <th>Empleadoid</th>
@@ -47,4 +37,3 @@
 <br /> 
 
 <%= link_to 'New Empleado', new_empleado_path %>
-</div>

@@ -1,0 +1,9 @@
+- content_for :head, javascript_include_tag('calendario.js')
+%h1= 'Calendario'
+
+#calendario
+	- (1..31).each do |dia|
+		.dia.noseleccionado{ :id => "dia_#{dia}"  }
+			%h1= dia
+
+#boton_comprobar= 'Comprobar días seleccionados'

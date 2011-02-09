@@ -1,12 +1,15 @@
 EKronos::Application.routes.draw do
 
-  get "session/index"
+	controller :calendario do
+		get 'calendario' => :index
+	end
 
-  get "session/new"
+	controller :session do
+		get 'login' => :index
+		get 'logout' => :destroy
+		post 'login' => :create
+	end
 
-  post "session/create"
-
-  get "session/destroy"
 
   resources :departamentos, :key => :departamentoid
 
@@ -63,7 +66,7 @@ EKronos::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => "welcome#index"
+  root :to => "session#index"
 
   # See how all your routes lay out with "rake routes"
 

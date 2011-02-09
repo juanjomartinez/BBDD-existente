@@ -2,10 +2,11 @@ class EmpleadosController < ApplicationController
   # GET /empleados
   # GET /empleados.xml
   def index
-    @empleados = Empleado.find(:all, :conditions => ["nombreempleado like ? or identificacion like ?", "%#{params[:q]}%", "%#{params[:q]}%"]).paginate :page => params[:page]
+    @empleados = Empleado.find(:all, :conditions => ["nombreempleado ilike ? or identificacion ilike ?", "%#{params[:q]}%", "%#{params[:q]}%"]).paginate :page => params[:page]
 
     respond_to do |format|
       format.html # index.html.erb
+			format.js
       format.xml  { render :xml => @empleados }
     end
   end
