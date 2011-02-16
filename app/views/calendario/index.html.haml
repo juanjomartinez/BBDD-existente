@@ -1,9 +1,28 @@
-- content_for :head, javascript_include_tag('calendario.js')
-%h1= 'Calendario'
+- content_for :head, javascript_include_tag('calendario_mes.js')
+- dias = %w[lunes martes miércoles jueves viernes sábado domingo]
+- meses = %W[enero febrero marzo abril mayo junio julio agosto septiembre octubre noviembre diciembre]
+%h1= meses[(Time.now.month)-1].capitalize
 
 #calendario
-	- (1..31).each do |dia|
+	- (0..6).each do |i|
+		.nombre_dia= dias[i].capitalize
+	.clear
+
+	- aux = 0
+	- (1..@dia_inicio-1).each do |dia|
+		.nombre_dia
+			%h1= ' '
+		- aux += 1
+		
+	- (1..@cant_dias).each do |dia|
 		.dia.noseleccionado{ :id => "dia_#{dia}"  }
 			%h1= dia
+		- aux += 1
+		- if aux%7==0
+			.clear
+	.clear
 
-#boton_comprobar= 'Comprobar días seleccionados'
+#boton_comprobar
+	%input{:value => 'seleccionar días', :type => 'button'} 
+
+#formulario= 'Esto es una prueba de dialog box'

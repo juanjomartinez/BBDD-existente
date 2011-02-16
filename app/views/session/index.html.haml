@@ -1,5 +1,5 @@
 #login_form
-	- form_tag('/login') do
+	= form_tag('/login') do
 		= 'Usuario: '
 		.field= text_field_tag :user, params[:user]
 		= 'Contraseña: '

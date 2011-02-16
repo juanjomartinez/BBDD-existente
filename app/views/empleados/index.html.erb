@@ -1,7 +1,8 @@
+<%= content_for :head, javascript_include_tag('buscador_empleados.js') %>
 <br />
 <div style="float: right">
 <%= form_tag empleados_path, :method => 'get', :remote => true do %>
-	<%= text_field_tag :q, params[:q] %>
+	<%= text_field_tag 'q' %>
 	<%= submit_tag 'Buscar' %>
 <% end %>
 <br />

@@ -1,4 +1,5 @@
 class EmpleadosController < ApplicationController
+	
   # GET /empleados
   # GET /empleados.xml
   def index

@@ -7,13 +7,16 @@
 		= yield :head
 
 	%body
-		#contenido
-			#cabecera
+		#contenido.grid_16
+			#cabecera.grid_16.omega.alpha
 				#login= link_to 'Logout', '/logout' unless !session[:administradorid]
 				#titulo= 'Control de horarios'
-			#menu
+			.clear
+			#menu.grid_16
 				= link_to 'Administradores', admins_path
 				= link_to 'Departamentos', departamentos_path
 				= link_to 'Empleados', empleados_path
 				= link_to 'Pruebas Calendario', calendario_path
 			= yield
+			.clear
+		.clear
